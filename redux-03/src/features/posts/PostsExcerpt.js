@@ -2,6 +2,7 @@ import PostAuthor from "./PostAuthor";
 import TimeAgo from "./TimeAgo";
 import ReactionButtons from "./ReactionButtons";
 
+// Add post title and body section
 const PostsExcerpt = ({ post }) => {
   return (
     <article>
