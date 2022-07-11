@@ -5,10 +5,8 @@ import {
   getPostsError,
   fetchPosts,
 } from "./postsSlice";
-
-import PostsExcerpt from "./PostsExcerpt";
-
 import { useEffect } from "react";
+import PostsExcerpt from "./PostsExcerpt";
 
 const PostsList = () => {
   const dispatch = useDispatch();
@@ -16,7 +14,6 @@ const PostsList = () => {
   const posts = useSelector(selectAllPosts);
   const postStatus = useSelector(getPostsStatus);
   const error = useSelector(getPostsError);
-
   useEffect(() => {
     if (postStatus === "idle") {
       dispatch(fetchPosts());
